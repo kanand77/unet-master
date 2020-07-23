@@ -99,7 +99,7 @@ def unet(pretrained_weights = None,input_size = (256,256,2), activation = 'relu'
 
     model = Model(inputs,conv10)
 
-    model.compile(optimizer=Adam(lr=1e-4), loss = "huber_loss", metrics=['mean_squared_error'])
+    model.compile(optimizer=Adam(lr=1e-5), loss = "huber_loss", metrics=['mean_squared_error'])
 
     if(pretrained_weights):
         model.load_weights(pretrained_weights)
